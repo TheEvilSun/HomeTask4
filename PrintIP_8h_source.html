@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HomeTask4: Исходный файл PrintIP/PrintIP.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HomeTask4
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Документация для четвертого ДЗ</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_9f260ab79832f5faa78b2bc2fcb6d90c.html">PrintIP</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">PrintIP.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="PrintIP_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="MetaFunctions_8h.html">MetaFunctions.h</a>&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="namespaceparse.html">   15</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceparse.html">parse</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> String, std::enable_if_t&lt;std::is_same_v&lt;String, std::<span class="keywordtype">string</span>&gt;, <span class="keywordtype">bool</span>&gt; = true&gt;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="namespaceparse.html#a107b2b7f4c5c3a82d6c21c43658f472f">   24</a></span>&#160;std::string <a class="code" href="namespaceparse.html#a107b2b7f4c5c3a82d6c21c43658f472f">parse_ip</a>(<span class="keyword">const</span> String&amp; ip, <span class="keyword">const</span> <span class="keywordtype">char</span>&amp; separator = <span class="charliteral">&#39;.&#39;</span>){</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordflow">return</span> ip;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;template&lt;typename Integer, std::enable_if_t&lt;std::numeric_limits&lt;Integer&gt;::is_integer, <span class="keywordtype">bool</span>&gt; = <span class="keyword">true</span>&gt;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="namespaceparse.html#a644d31cdfa02f880e2e85db401baee5c">   35</a></span>&#160;std::string <a class="code" href="namespaceparse.html#a107b2b7f4c5c3a82d6c21c43658f472f">parse_ip</a>(<span class="keyword">const</span> Integer&amp; ip, <span class="keyword">const</span> <span class="keywordtype">char</span>&amp; separator = <span class="charliteral">&#39;.&#39;</span>){</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::make_unsigned_t&lt;Integer&gt; mask;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">switch</span>(<span class="keyword">sizeof</span>(Integer)) {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordflow">case</span> 1: {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        mask = 0xFF;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">case</span> 2: {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        mask = 0xFF00;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keywordflow">case</span> 4: {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        mask = 0xFF000000;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">case</span> 8:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        mask = 0xFF00000000000000;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    std::ostringstream stream(<span class="stringliteral">&quot;&quot;</span>, std::ios::out);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">auto</span> <span class="keywordtype">byte</span> = <span class="keyword">static_cast&lt;</span>u_int16_t<span class="keyword">&gt;</span>((ip &amp; mask) &gt;&gt; ((<span class="keyword">sizeof</span>(ip) - 1) * 8));</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    mask = mask &gt;&gt; 8;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    stream &lt;&lt; byte;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">size_t</span> i = 1; i &lt; <span class="keyword">sizeof</span>(ip); i++, mask = mask &gt;&gt; 8) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">byte</span> = <span class="keyword">static_cast&lt;</span>u_int16_t<span class="keyword">&gt;</span>((ip &amp; mask) &gt;&gt; ((<span class="keyword">sizeof</span>(ip) - i - 1) * 8));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        stream &lt;&lt; separator &lt;&lt; byte;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> stream.str();</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Container, std::enable_if_t&lt;meta::is_container_v&lt;Container&gt;, <span class="keywordtype">bool</span>&gt; = true&gt;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="namespaceparse.html#a09d49a6d1e6c6c61833b627e75304c76">   78</a></span>&#160;std::string <a class="code" href="namespaceparse.html#a107b2b7f4c5c3a82d6c21c43658f472f">parse_ip</a>(<span class="keyword">const</span> Container&amp; ip, <span class="keyword">const</span> <span class="keywordtype">char</span>&amp; separator = <span class="charliteral">&#39;.&#39;</span>){</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    static_assert(std::numeric_limits&lt;typename Container::value_type&gt;::is_integer, <span class="stringliteral">&quot;Container type must be integer&quot;</span>);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">if</span>(ip.empty()) {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    std::ostringstream stream(<span class="stringliteral">&quot;&quot;</span>, std::ios::out);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keyword">auto</span> iter = ip.begin();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    stream &lt;&lt; *iter;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    iter++;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">for</span>(; iter != ip.end(); iter++) {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        stream &lt;&lt; separator &lt;&lt; *iter;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordflow">return</span> stream.str();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> Tuple, std::enable_if_t&lt;meta::is_tuple_v&lt;Tuple&gt;, <span class="keywordtype">bool</span>&gt; = true&gt;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="namespaceparse.html#a53f5e7fca100b1bb4751014efff460e2">  107</a></span>&#160;std::string <a class="code" href="namespaceparse.html#a107b2b7f4c5c3a82d6c21c43658f472f">parse_ip</a>(<span class="keyword">const</span> Tuple&amp; ip, <span class="keyword">const</span> <span class="keywordtype">char</span>&amp; separator = <span class="charliteral">&#39;.&#39;</span>) {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="keywordflow">if</span>(std::tuple_size_v&lt;Tuple&gt; == 0) {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> {};</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    meta::check_integer_tuple_type&lt;Tuple&gt;();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordflow">return</span> meta::tuple_to_string&lt;Tuple&gt;(ip, separator);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;}</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00123"></a><span class="lineno"><a class="line" href="namespaceparse.html#ac76586d5c4a66414e3cdebe28eee7556">  123</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespaceparse.html#ac76586d5c4a66414e3cdebe28eee7556">print_ip</a>(<span class="keyword">const</span> T&amp; ip, <span class="keyword">const</span> <span class="keywordtype">char</span>&amp; separator = <span class="charliteral">&#39;.&#39;</span>) {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    std::cout &lt;&lt; <a class="code" href="namespaceparse.html#a107b2b7f4c5c3a82d6c21c43658f472f">parse_ip</a>(ip, separator) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;}</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;}</div>
+<div class="ttc" id="aMetaFunctions_8h_html"><div class="ttname"><a href="MetaFunctions_8h.html">MetaFunctions.h</a></div></div>
+<div class="ttc" id="anamespaceparse_html"><div class="ttname"><a href="namespaceparse.html">parse</a></div><div class="ttdoc">Функции парсинга и печати условного IP-адреса</div><div class="ttdef"><b>Definition:</b> PrintIP.h:15</div></div>
+<div class="ttc" id="anamespaceparse_html_a107b2b7f4c5c3a82d6c21c43658f472f"><div class="ttname"><a href="namespaceparse.html#a107b2b7f4c5c3a82d6c21c43658f472f">parse::parse_ip</a></div><div class="ttdeci">std::string parse_ip(const String &amp;ip, const char &amp;separator='.')</div><div class="ttdef"><b>Definition:</b> PrintIP.h:24</div></div>
+<div class="ttc" id="anamespaceparse_html_ac76586d5c4a66414e3cdebe28eee7556"><div class="ttname"><a href="namespaceparse.html#ac76586d5c4a66414e3cdebe28eee7556">parse::print_ip</a></div><div class="ttdeci">void print_ip(const T &amp;ip, const char &amp;separator='.')</div><div class="ttdef"><b>Definition:</b> PrintIP.h:123</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

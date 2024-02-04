@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>HomeTask4: Исходный файл MetaFunctions/MetaFunctions.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">HomeTask4
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Документация для четвертого ДЗ</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Поиск','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_aa1f574de91a66253d34066d94507d78.html">MetaFunctions</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">MetaFunctions.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="MetaFunctions_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;type_traits&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="namespacemeta.html">   19</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemeta.html">meta</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="structmeta_1_1is__container.html">   26</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmeta_1_1is__container.html">is_container</a> : std::false_type {};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structmeta_1_1is__container_3_01std_1_1list_3_01Ts_8_8_8_01_4_01_4.html">   34</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmeta_1_1is__container.html">is_container</a>&lt; std::list&lt;Ts...&gt; &gt; : std::true_type{};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="structmeta_1_1is__container_3_01std_1_1vector_3_01Ts_8_8_8_01_4_01_4.html">   42</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmeta_1_1is__container.html">is_container</a>&lt; std::vector&lt;Ts...&gt; &gt; : std::true_type{};</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="namespacemeta.html#af5d3e299106949c7247c3e482bead3f4">   45</a></span>&#160;<span class="keyword">inline</span> constexpr <span class="keywordtype">bool</span> <a class="code" href="namespacemeta.html#af5d3e299106949c7247c3e482bead3f4">is_container_v</a> = <a class="code" href="structmeta_1_1is__container.html">is_container</a>&lt;Ts...&gt;::value;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="structmeta_1_1is__tuple.html">   53</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmeta_1_1is__tuple.html">is_tuple</a> : std::false_type {};</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="structmeta_1_1is__tuple_3_01std_1_1tuple_3_01Ts_8_8_8_01_4_01_4.html">   61</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structmeta_1_1is__tuple.html">is_tuple</a>&lt; std::tuple&lt;Ts...&gt; &gt; : std::true_type {};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span>... Ts&gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="namespacemeta.html#a952ccd5d89a27bece6cdf5576e39a70a">   64</a></span>&#160;<span class="keyword">inline</span> constexpr <span class="keywordtype">bool</span> <a class="code" href="namespacemeta.html#a952ccd5d89a27bece6cdf5576e39a70a">is_tuple_v</a> = <a class="code" href="structmeta_1_1is__tuple.html">is_tuple</a>&lt;Ts...&gt;::value;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tuple, std::<span class="keywordtype">size_t</span> I = 0&gt;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="namespacemeta.html#af8a5e27e96917b4cf6ff305eeea274e5">   74</a></span>&#160;std::string <a class="code" href="namespacemeta.html#af8a5e27e96917b4cf6ff305eeea274e5">tuple_to_string</a>(<span class="keyword">const</span> Tuple&amp; tuple, <span class="keyword">const</span> <span class="keywordtype">char</span>&amp; separator = <span class="charliteral">&#39;.&#39;</span>) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordflow">if</span> constexpr (I == std::tuple_size_v&lt;Tuple&gt; - 1) {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> std::to_string(std::get&lt;I&gt;(tuple));</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr (I &lt; std::tuple_size_v&lt;Tuple&gt;) {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> std::to_string(std::get&lt;I&gt;(tuple)) + separator + tuple_to_string&lt;Tuple, I + 1&gt;(tuple, separator);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> Tuple, std::<span class="keywordtype">size_t</span> I = 0&gt;</div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="namespacemeta.html#ac9c860cdfcaef37399cad045ab103ee7">   88</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="namespacemeta.html#ac9c860cdfcaef37399cad045ab103ee7">check_integer_tuple_type</a>() {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">if</span> constexpr (I &lt; std::tuple_size_v&lt;Tuple&gt;) {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        static_assert(std::numeric_limits&lt; std::tuple_element_t&lt;I, Tuple&gt; &gt;::is_integer, <span class="stringliteral">&quot;Tuple element must be integer&quot;</span>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        check_integer_tuple_type&lt;Tuple, I + 1&gt;();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
+<div class="ttc" id="anamespacemeta_html"><div class="ttname"><a href="namespacemeta.html">meta</a></div><div class="ttdoc">Метафункции для работы с контейнерами std::vector, std::list, std::tuple</div><div class="ttdef"><b>Definition:</b> MetaFunctions.h:19</div></div>
+<div class="ttc" id="anamespacemeta_html_a952ccd5d89a27bece6cdf5576e39a70a"><div class="ttname"><a href="namespacemeta.html#a952ccd5d89a27bece6cdf5576e39a70a">meta::is_tuple_v</a></div><div class="ttdeci">constexpr bool is_tuple_v</div><div class="ttdef"><b>Definition:</b> MetaFunctions.h:64</div></div>
+<div class="ttc" id="anamespacemeta_html_ac9c860cdfcaef37399cad045ab103ee7"><div class="ttname"><a href="namespacemeta.html#ac9c860cdfcaef37399cad045ab103ee7">meta::check_integer_tuple_type</a></div><div class="ttdeci">void check_integer_tuple_type()</div><div class="ttdef"><b>Definition:</b> MetaFunctions.h:88</div></div>
+<div class="ttc" id="anamespacemeta_html_af5d3e299106949c7247c3e482bead3f4"><div class="ttname"><a href="namespacemeta.html#af5d3e299106949c7247c3e482bead3f4">meta::is_container_v</a></div><div class="ttdeci">constexpr bool is_container_v</div><div class="ttdef"><b>Definition:</b> MetaFunctions.h:45</div></div>
+<div class="ttc" id="anamespacemeta_html_af8a5e27e96917b4cf6ff305eeea274e5"><div class="ttname"><a href="namespacemeta.html#af8a5e27e96917b4cf6ff305eeea274e5">meta::tuple_to_string</a></div><div class="ttdeci">std::string tuple_to_string(const Tuple &amp;tuple, const char &amp;separator='.')</div><div class="ttdef"><b>Definition:</b> MetaFunctions.h:74</div></div>
+<div class="ttc" id="astructmeta_1_1is__container_html"><div class="ttname"><a href="structmeta_1_1is__container.html">meta::is_container</a></div><div class="ttdef"><b>Definition:</b> MetaFunctions.h:26</div></div>
+<div class="ttc" id="astructmeta_1_1is__tuple_html"><div class="ttname"><a href="structmeta_1_1is__tuple.html">meta::is_tuple</a></div><div class="ttdef"><b>Definition:</b> MetaFunctions.h:53</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>
